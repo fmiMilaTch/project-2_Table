@@ -24,12 +24,17 @@ void TableCommand::open(){
 
 }
 void TableCommand::close(){
-    delete currentFile;
-    currentFileLen=0;
-    delete table;
-    openedFile=false;
-    unsavedChanges=false;
-    std::cout<<"The file was successfully closed."<<std::endl;
+    if(openedFile){
+        delete currentFile;
+        currentFileLen=0;
+        delete table;
+        openedFile=false;
+        unsavedChanges=false;
+        std::cout<<"The file was successfully closed."<<std::endl;
+    }
+    else{
+        std::cout<<"There is no currently opened file to be closed."<<std::endl;
+    }
 }
 void TableCommand::save(){
     if(openedFile){
@@ -68,7 +73,7 @@ void TableCommand::help()const{
 }
 void TableCommand::print() const{
     if(openedFile){
-        table->tempPrint();
+        table->print();
     }
     else{
         std::cout<<"Currently there is not an opened file to print."<<std::endl;
@@ -85,7 +90,7 @@ void TableCommand::edit(){
         char c;
         std::cin.get(c);
         table->edit(row,col);
-        unsavedChanges=true;///ne e sigurno...moge da promenia tipa, no shte e tupichko :/
+        unsavedChanges=true;///ne e sigurno...moge da promenia tipa na edit, no shte e tupichko :/
     }
     else{
         std::cout<<"Currently there is not an opened file to edit."<<std::endl;
@@ -93,6 +98,7 @@ void TableCommand::edit(){
 }
 void TableCommand::start(){
     char buffer[BUFF_SIZE];
+    std::cout<<"Welcome. Type \"help\" for list of existing commands."<<std::endl;
     while(1){
         std::cout<<'>';
         std::cin>>std::ws>>std::setw(BUFF_SIZE);
