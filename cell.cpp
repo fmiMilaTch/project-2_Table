@@ -28,14 +28,11 @@ Cell* Cell::clone() const{
 double Cell::getValue() const{
     return 0;
 }
-std::ostream& operator<<(std::ostream& ostream, const Cell& cell){
-    ostream<<cell.cellContents;
-    return ostream;
-}
+
 Cell::~Cell(){
     del();
 }
-double convertToNum(const char* text, int from, int to){///da dobavia proverka za nullptr, vunshna funkcia
+double convertToNum(const char* text, int from, int to){
     if(text!=nullptr){
         double full=0;
         double part=0;
@@ -84,7 +81,7 @@ double convertToNum(const char* text, int from, int to){///da dobavia proverka z
     }
     return 0;
 }
-int convertToFullNum(const char* text, int from, int to){//moge da razdelia prosto na dwa sluchaia za + ili -, a ne dwe proverki?
+int convertToFullNum(const char* text, int from, int to){
     if(text!=nullptr){
         double num=0;
         double ch=0;
@@ -200,7 +197,7 @@ bool isFormula(const char* text){
     }
     return false;
 }
-double convertEquasion(const char* text){
+double convertEquasion(const char* text){///isFormula razpoznava prepratki kum kletki, no ne i convertEquasion, ako ima prepratki niama da raboti pravilno ;;
 
     double sum=0;
     double temp1=1;
@@ -250,7 +247,7 @@ double convertEquasion(const char* text){
                         }
                         if(text[k]=='/'){
                             if(temp2==0){
-                                return 0;///hubavo mestence za greshka :)
+                                return 0;
                             }
                             temp1/=temp2;
                             temp2=1;
