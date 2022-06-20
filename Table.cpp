@@ -1,5 +1,6 @@
 #include"Table.hpp"
 #include<iomanip>
+
 void Table::del(){
     for(unsigned i=0;i<rows;i++){
         delete[] cellsTable[i];
@@ -85,7 +86,7 @@ Table::Table(const char* filename){
                 }
                 unsigned buffLen=strlen(buffer);
                 if(buffLen==0){
-                    cellsTable[rows][collCount]=new Cell(buffer);///hmmmm za prazni kletki
+                    cellsTable[rows][collCount]=new Cell(buffer);
                 }
                 else if((buffer[0]=='"')&&(buffer[buffLen-1]=='"')){
                     cellsTable[rows][collCount]=new TextCell(buffer);
@@ -99,7 +100,7 @@ Table::Table(const char* filename){
                 else if(isFormula(buffer)){
                     cellsTable[rows][collCount]=new FormulaCell(buffer);
                 }
-                else{///tuka e mestence za greshka
+                else{
                     std::cout<<"Unknown cell type ["<<rows+1<<"]["<<collCount+1<<"]."<<std::endl;
                 }
                 collCount++;
@@ -141,7 +142,7 @@ void Table::resizeTable(){
     capacity=newCapacaity;
 }
 
-void Table::tempPrint() const{
+void Table::print() const{
     for(unsigned i=0;i<rows;i++){
         std::cout<<"|";
         for(unsigned k=0;k<collumns;k++){
@@ -174,7 +175,7 @@ void Table::edit(unsigned row,unsigned col){
     unsigned buffLen=strlen(buffer);
     if(buffLen==0){
         delete cellsTable[row-1][col-1];
-        cellsTable[row-1][col-1]=new Cell(buffer);///hmmmm za prazni kletki
+        cellsTable[row-1][col-1]=new Cell(buffer);
     }
     else if((buffer[0]=='"')&&(buffer[buffLen-1]=='"')){
         delete cellsTable[row-1][col-1];
