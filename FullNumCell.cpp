@@ -1,11 +1,6 @@
 #include"FullNumCell.hpp"
 FullNumCell::FullNumCell(const char* contents):Cell(contents){
-    if(isFullNumber(contents,0,contSize-1)){///samo zasega proverka
         numValue=convertToFullNum(contents,0,contSize-1);
-    }
-    else{
-        numValue=0;
-    }
 }
 Cell* FullNumCell::clone() const{
     return new FullNumCell(*this);
