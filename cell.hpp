@@ -17,12 +17,11 @@ public:
     virtual double getValue() const;
     virtual ~Cell();
     virtual void print() const{
-        std::cout<<cellContents<<" "<<contSize;
+        std::cout<<cellContents<<" "<<contSize<<" ";
     }
     const char* getContents() const{
         return cellContents;
     }
-    friend std::ostream& operator<<(std::ostream& ostream, const Cell& cell);
 };
 
 double convertToNum(const char* text, int from, int to);
