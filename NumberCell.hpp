@@ -9,3 +9,4 @@ public:
     double getValue() const;
     NumberCell& operator=(const NumberCell&);
 };
+
