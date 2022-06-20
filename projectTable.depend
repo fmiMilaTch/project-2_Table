@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1655747816 source:c:\users\user\documents\oop praktikum\projecttable\main.cpp
+1655754318 source:c:\users\user\documents\oop praktikum\projecttable\main.cpp
 	"TableCommand.hpp"
 
 1655751520 source:c:\users\user\documents\oop praktikum\projecttable\textcell.cpp
@@ -8,12 +8,12 @@
 1655751520 c:\users\user\documents\oop praktikum\projecttable\textcell.hpp
 	"cell.hpp"
 
-1655751520 c:\users\user\documents\oop praktikum\projecttable\cell.hpp
+1655753410 c:\users\user\documents\oop praktikum\projecttable\cell.hpp
 	<iostream>
 	<cstring>
 	<fstream>
 
-1655750307 source:c:\users\user\documents\oop praktikum\projecttable\cell.cpp
+1655753620 source:c:\users\user\documents\oop praktikum\projecttable\cell.cpp
 	"cell.hpp"
 
 1655751520 source:c:\users\user\documents\oop praktikum\projecttable\numbercell.cpp
@@ -22,29 +22,29 @@
 1655751272 c:\users\user\documents\oop praktikum\projecttable\numbercell.hpp
 	"cell.hpp"
 
-1655751520 source:c:\users\user\documents\oop praktikum\projecttable\fullnumcell.cpp
+1655753620 source:c:\users\user\documents\oop praktikum\projecttable\fullnumcell.cpp
 	"FullNumCell.hpp"
 
 1655751405 c:\users\user\documents\oop praktikum\projecttable\fullnumcell.hpp
 	"cell.hpp"
 
-1655659220 source:c:\users\user\documents\oop praktikum\projecttable\formulacell.cpp
+1655753620 source:c:\users\user\documents\oop praktikum\projecttable\formulacell.cpp
 	"FormulaCell.hpp"
 
-1655658324 c:\users\user\documents\oop praktikum\projecttable\formulacell.hpp
+1655757273 c:\users\user\documents\oop praktikum\projecttable\formulacell.hpp
 	"cell.hpp"
 
-1655751062 source:c:\users\user\documents\oop praktikum\projecttable\table.cpp
+1655755094 source:c:\users\user\documents\oop praktikum\projecttable\table.cpp
 	"Table.hpp"
 	<iomanip>
 
-1655751520 c:\users\user\documents\oop praktikum\projecttable\table.hpp
+1655755094 c:\users\user\documents\oop praktikum\projecttable\table.hpp
 	"TextCell.hpp"
 	"NumberCell.hpp"
 	"FullNumCell.hpp"
 	"FormulaCell.hpp"
 
-1655751062 source:c:\users\user\documents\oop praktikum\projecttable\tablecommand.cpp
+1655757066 source:c:\users\user\documents\oop praktikum\projecttable\tablecommand.cpp
 	"TableCommand.hpp"
 	<iomanip>
 
