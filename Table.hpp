@@ -16,7 +16,7 @@ public:
     Table(const char* filename);
     Table(const Table&);
     Table& operator=(const Table&);
-    void tempPrint() const;
+    void print() const;
     void edit(unsigned row,unsigned col);
     void saveToFile(const char*) const;
     ~Table();
